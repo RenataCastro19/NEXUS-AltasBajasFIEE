@@ -9,7 +9,7 @@ public class ExperienciaEducativa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idee")
-    private Long idEE;
+    private Integer idEE;
 
     @Column(name = "nombreee", length = 150, nullable = false)
     private String nombreEE;
@@ -25,10 +25,10 @@ public class ExperienciaEducativa {
 
     }
 
-    public Long getIdAlumno() {
+    public Integer getIdAlumno() {
         return idEE;
     }
-    public void setIdAlumno(Long idEE) {
+    public void setIdAlumno(Integer idEE) {
         this.idEE= idEE;
     }
 

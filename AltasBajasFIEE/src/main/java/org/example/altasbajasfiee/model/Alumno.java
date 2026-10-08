@@ -10,7 +10,7 @@ public class Alumno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idalumno")
-    private Long idAlumno;
+    private Integer idAlumno;
 
     @Column(name = "matriculaalumno", length = 9, unique = true, nullable = false)
     private String matriculaAlumno;
@@ -28,10 +28,10 @@ public class Alumno {
 
     public Alumno() {}
 
-    public Long getIdAlumno(){
+    public Integer getIdAlumno(){
         return idAlumno;
     }
-    public void setIdAlumno(Long idAlumno){
+    public void setIdAlumno(Integer idAlumno){
         this.idAlumno = idAlumno;
     }
 

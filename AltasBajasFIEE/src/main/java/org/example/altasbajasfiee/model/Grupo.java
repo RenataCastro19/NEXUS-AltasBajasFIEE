@@ -9,7 +9,7 @@ public class Grupo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idgrupo")
-    private Long idGrupo;
+    private Integer idGrupo;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idee", nullable = false)
@@ -38,10 +38,10 @@ public class Grupo {
 
     }
 
-    public Long getIdGrupo() {
+    public Integer getIdGrupo() {
         return idGrupo;
     }
-    public void setIdGrupo(Long idGrupo) {
+    public void setIdGrupo(Integer idGrupo) {
         this.idGrupo = idGrupo;
     }
 

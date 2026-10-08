@@ -9,7 +9,7 @@ public class TipoBloqueCreditos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idtipobloque")
-    private Long idTipoBloque;
+    private Integer idTipoBloque;
 
     @Column(name= "nombrebloquecreditos", nullable = false, length = 100)
     private String nombreBloque;
@@ -25,10 +25,10 @@ public class TipoBloqueCreditos {
     }
 
 
-    public Long getIdTipoBloque() {
+    public Integer getIdTipoBloque() {
         return idTipoBloque;
     }
-    public void setIdTIpoBloque(Long idTipoBloque) {
+    public void setIdTipoBloque(Integer idTipoBloque) {
         this.idTipoBloque = idTipoBloque;
     }
 

@@ -14,7 +14,7 @@ public class ProgramaEducativo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idprogramaeducativo")
-    private Long idProgramaEducativo;
+    private Integer idProgramaEducativo;
 
     @Column(name = "nombreprogramaeducativo", nullable = false, length = 100)
     private String nombreProgramaEducativo;
@@ -23,10 +23,10 @@ public class ProgramaEducativo {
     public ProgramaEducativo() {}
 
 
-    public Long getIdProgramaEducativo() {
+    public Integer getIdProgramaEducativo() {
         return idProgramaEducativo;
     }
-    public void setIdProgramaEducativo(Long idProgramaEducativo){
+    public void setIdProgramaEducativo(Integer idProgramaEducativo){
         this.idProgramaEducativo = idProgramaEducativo;
     }
 

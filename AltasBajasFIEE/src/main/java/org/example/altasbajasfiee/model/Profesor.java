@@ -8,7 +8,7 @@ public class Profesor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "idprofesor")
-    private Long idProfesor;
+    private Integer idProfesor;
 
     @Column (name = "nombreprofesor", nullable = false, length = 100)
     private String nombreProfesor;
@@ -18,10 +18,10 @@ public class Profesor {
 
     public Profesor() {}
 
-    public Long getIdprofesor() {
+    public Integer getIdprofesor() {
         return idProfesor;
     }
-    public void setIdprofesor(long idprofesor) {
+    public void setIdprofesor(Integer idprofesor) {
         this.idProfesor= idprofesor;
     }
 

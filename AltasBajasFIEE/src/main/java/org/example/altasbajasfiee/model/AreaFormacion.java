@@ -9,7 +9,7 @@ public class AreaFormacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idareaformacion")
-    private Long idAreaFormacion;
+    private Integer idAreaFormacion;
 
     @Column(name = "nombreareaformacion", nullable = false, length = 100)
     private String nombreAreaFormacion;
@@ -18,11 +18,11 @@ public class AreaFormacion {
 
     }
 
-    public Long getIdAreaFormacion() {
+    public Integer getIdAreaFormacion() {
         return idAreaFormacion;
     }
 
-    public void setIdAreaFormacion(Long idAreaFormacion) {
+    public void setIdAreaFormacion(Integer idAreaFormacion) {
         this.idAreaFormacion = idAreaFormacion;
     }
 

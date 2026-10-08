@@ -7,7 +7,7 @@ public class Secretario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idsecretario")
-    private Long idSecretario;
+    private Integer idSecretario;
 
     @Column(name = "nombresecretario", nullable = false, length = 100)
     private String nombreSecretario;
@@ -21,10 +21,10 @@ public class Secretario {
 
     public Secretario(){}
 
-    public Long getIdSecretario(){
+    public Integer getIdSecretario(){
         return idSecretario;
     }
-    public void setIdSecretario(Long idSecretario){
+    public void setIdSecretario(Integer idSecretario){
         this.idSecretario= idSecretario;
     }
 

@@ -10,7 +10,7 @@ public class Periodo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idperiodo")
-    private Long idPeriodo;
+    private Integer idPeriodo;
 
     @Column(name = "nombreperiodo", nullable = false, length = 100)
     private String nombrePeriodo;
@@ -25,10 +25,10 @@ public class Periodo {
 
     }
 
-    public Long getIdPeriodo(){
+    public Integer getIdPeriodo(){
         return idPeriodo;
     }
-    public void setIdPeriodo(Long idPeriodo){
+    public void setIdPeriodo(Integer idPeriodo){
         this.idPeriodo = idPeriodo;
     }
 
@@ -46,5 +46,11 @@ public class Periodo {
         this.fechaInicio= fechaInicio;
     }
 
+    public LocalDate getFechaFin(){
+        return fechaFin;
+    }
+    public void setFechaFin(LocalDate fechaFin){
+        this.fechaFin = fechaFin;
+    }
 
 }

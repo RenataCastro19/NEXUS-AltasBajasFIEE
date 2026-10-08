@@ -9,7 +9,7 @@ public class Prerrequisito {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idprerrequisito")
-    private Long idPrerrequisito;
+    private Integer idPrerrequisito;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idee", nullable = false)
@@ -23,10 +23,10 @@ public class Prerrequisito {
 
     }
 
-    public Long getIdPrerrequisito() {
+    public Integer getIdPrerrequisito() {
         return idPrerrequisito;
     }
-    public void setIdPrerrequisito(Long idPrerrequisito) {
+    public void setIdPrerrequisito(Integer idPrerrequisito) {
         this.idPrerrequisito = idPrerrequisito;
     }
 

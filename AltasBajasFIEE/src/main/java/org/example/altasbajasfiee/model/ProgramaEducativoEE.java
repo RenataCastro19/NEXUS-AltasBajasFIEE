@@ -10,7 +10,7 @@ public class ProgramaEducativoEE {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idprogramaeducativoee")
-    private Long idProgramaEducativoee;
+    private Integer idProgramaEducativoee;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -25,10 +25,10 @@ public class ProgramaEducativoEE {
 
     }
 
-    public Long getIdprogramaeducativoee() {
+    public Integer getIdprogramaeducativoee() {
         return idProgramaEducativoee;
     }
-    public void setIdprogramaeducativoee(Long idprogramaeducativoee){
+    public void setIdprogramaeducativoee(Integer idprogramaeducativoee){
         this.idProgramaEducativoee= idprogramaeducativoee;
     }
 
