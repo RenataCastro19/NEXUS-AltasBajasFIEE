@@ -14,9 +14,6 @@ public class ExperienciaEducativa {
     @Column(name = "nombreee", length = 150, nullable = false)
     private String nombreEE;
 
-    @Column(name = "creditos", nullable = false)
-    private Integer creditos;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idareaformacion", nullable = false)
     private AreaFormacion areaFormacion;
@@ -25,10 +22,10 @@ public class ExperienciaEducativa {
 
     }
 
-    public Integer getIdAlumno() {
+    public Integer getIdEE() {
         return idEE;
     }
-    public void setIdAlumno(Integer idEE) {
+    public void setIdEE(Integer idEE) {
         this.idEE= idEE;
     }
 
@@ -37,13 +34,6 @@ public class ExperienciaEducativa {
     }
     public void setNombreEE(String nombreEE){
         this.nombreEE=nombreEE;
-    }
-
-    public Integer getCreditos(){
-        return creditos;
-    }
-    public void setCreditos(Integer creditos){
-        this.creditos=creditos;
     }
 
     public AreaFormacion getAreaFormacion(){

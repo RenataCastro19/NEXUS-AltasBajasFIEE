@@ -10,7 +10,7 @@ public class ProgramaEducativoEE {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idprogramaeducativoee")
-    private Integer idProgramaEducativoee;
+    private Integer idProgramaEducativoEE;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -21,15 +21,18 @@ public class ProgramaEducativoEE {
     @JoinColumn(name = "idee", nullable = false)
     private ExperienciaEducativa experienciaEducativa;
 
+    @Column(name = "creditos", nullable = false)
+    private Integer creditos;
+
     public ProgramaEducativoEE(){
 
     }
 
-    public Integer getIdprogramaeducativoee() {
-        return idProgramaEducativoee;
+    public Integer getIdProgramaEducativoEE() {
+        return idProgramaEducativoEE;
     }
-    public void setIdprogramaeducativoee(Integer idprogramaeducativoee){
-        this.idProgramaEducativoee= idprogramaeducativoee;
+    public void setIdProgramaEducativoEE(Integer idprogramaeducativoee){
+        this.idProgramaEducativoEE= idprogramaeducativoee;
     }
 
     public ProgramaEducativo getProgramaEducativo() {
@@ -44,6 +47,13 @@ public class ProgramaEducativoEE {
     }
     public void setExperienciaEducativa(ExperienciaEducativa experienciaEducativa){
         this.experienciaEducativa= experienciaEducativa;
+    }
+
+    public void setCreditos(Integer creditos){
+        this.creditos= creditos;
+    }
+    public Integer getCreditos() {
+        return creditos;
     }
 
 }

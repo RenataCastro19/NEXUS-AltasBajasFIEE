@@ -3,7 +3,7 @@ package org.example.altasbajasfiee.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "prerrequisito", uniqueConstraints =  @UniqueConstraint(columnNames = {"idee", "ideeprerrequisito"}))
+@Table(name = "prerrequisito", uniqueConstraints =  @UniqueConstraint(columnNames = {"idprogramaeducativo", "idee", "ideeprerrequisito"}))
 public class Prerrequisito {
 
     @Id
@@ -18,6 +18,10 @@ public class Prerrequisito {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name= "ideeprerrequisito", nullable = false)
     private ExperienciaEducativa experienciaEducativaPrerrequisito;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idprogramaeducativo", nullable = false)
+    private ProgramaEducativo programaEducativo;
 
     public Prerrequisito(){
 
@@ -44,4 +48,12 @@ public class Prerrequisito {
     public void setExperienciaEducativaPrerrequisito(ExperienciaEducativa experienciaEducativaPrerrequisito){
         this.experienciaEducativaPrerrequisito = experienciaEducativaPrerrequisito;
     }
+
+    public ProgramaEducativo getProgramaEducativo() {
+        return programaEducativo;
+    }
+    public void setProgramaEducativo(ProgramaEducativo programaEducativo) {
+        this.programaEducativo =programaEducativo;
+    }
+
 }
