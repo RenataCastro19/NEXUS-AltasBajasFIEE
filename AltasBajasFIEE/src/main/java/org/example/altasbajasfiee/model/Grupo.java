@@ -21,17 +21,17 @@ public class Grupo {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idprofesor", nullable = false)
-    private Profesor profesor;
+    private Usuario profesor;
 
 
     @Column(name = "cupomax", nullable = false)
     private Integer cupoMax;
 
 
-    @Column(name = "nrc", nullable = false, unique = true, length = 5)
+    @Column(name = "nrc", nullable = false, length = 5)
     private String nrc;
 
-    @Column(name="salon", nullable = false, length = 3)
+    @Column(name="salon", nullable = false, length = 10)
     private String salon;
 
     public Grupo() {
@@ -59,10 +59,10 @@ public class Grupo {
         this.periodo = periodo;
     }
 
-    public Profesor getProfesor(){
+    public Usuario getProfesor(){
         return profesor;
     }
-    public void setProfesor(Profesor profesor){
+    public void setProfesor(Usuario profesor){
         this.profesor = profesor;
     }
 

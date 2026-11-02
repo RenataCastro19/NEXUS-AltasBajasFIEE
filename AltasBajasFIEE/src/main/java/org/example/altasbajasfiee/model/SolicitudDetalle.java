@@ -24,7 +24,7 @@ public class SolicitudDetalle {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idsecretario")
-    private Secretario secretario;
+    private Usuario secretario;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "tiposolicitud", nullable = false, length = 10)
@@ -48,7 +48,7 @@ public class SolicitudDetalle {
         this.idSolicitudDetalle = idSolicitudDetalle;
     }
 
-    public SolicitudTramite getIdsolicitudtramite() {
+    public SolicitudTramite getSolicitudTramite() {
         return solicitudTramite;
     }
     public void setSolicitudTramite(SolicitudTramite solicitudTramite) {
@@ -62,10 +62,10 @@ public class SolicitudDetalle {
         this.grupo = grupo;
     }
 
-    public Secretario getSecretario() {
+    public Usuario getSecretario() {
         return secretario;
     }
-    public void setSecretario(Secretario secretario) {
+    public void setSecretario(Usuario secretario) {
         this.secretario = secretario;
     }
 
